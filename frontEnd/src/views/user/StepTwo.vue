@@ -2480,7 +2480,7 @@
                 this.tree = this.createTre(this, 'div_tree', '', contex_menu);
 
                 var treeMsg;
-                this.$http.post(this.url + '/getTree/' + this.$route.params.rId, {"username": sessionStorage.getItem("username")}).then(res => {
+                this.$http.get(this.url + '/getTree/' + this.$route.params.rId, {"username": sessionStorage.getItem("username")}).then(res => {
 
 //          this.$set('treeMsg',treeMsg);
                     treeMsg = res.body;

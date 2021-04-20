@@ -70,7 +70,7 @@
             HeadBarLight2
         },
         mounted: function () {
-            this.$http.post(this.url + '/getRequirement/' + this.$route.params.rId,{"username": sessionStorage.getItem("username")}).then(response => {
+            this.$http.get(this.url + '/getRequirement/' + this.$route.params.rId,{"username": sessionStorage.getItem("username")}).then(response => {
                     console.log('save success');
                     console.log(response.body);
                     this.form.projectName = response.body.description.projectName;

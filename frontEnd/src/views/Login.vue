@@ -59,13 +59,13 @@
             var mobile = "";
             var email = "";
 
-            this.$store.commit('setToken', response.tokenid);
+            this.$store.commit('setToken', response.data.result.tokenid);
             this.$store.commit('setUsername', this.account);
             this.$store.commit('setRealname', realname);
             this.$store.commit('setMobile', mobile);
             this.$store.commit('setEmail', email);
 
-            sessionStorage.setItem('tokenid', response.tokenid);
+            sessionStorage.setItem('tokenid', response.data.result.tokenid);
             sessionStorage.setItem('username', this.account);
             sessionStorage.setItem('realname', realname);
             sessionStorage.setItem('mobile', mobile);

@@ -230,7 +230,7 @@
       },
         init(){
             console.log(this.url + '/getAllRequirements')
-            this.$http.post(this.url + '/getAllRequirementsByUser',{"username": sessionStorage.getItem("username")}).then(res=>{
+            this.$http.get(this.url + '/getAllRequirementsByUser',{"username": sessionStorage.getItem("username")}).then(res=>{
                 for(var i = 0; i < res.body.length; i++){
                     var temp = {
                         "rId" : '',
@@ -343,7 +343,7 @@
       }
     },
     mounted() {
-        this.$http.post(this.url + '/identity',{"username": sessionStorage.getItem("username")}).then(res=>{
+        this.$http.get(this.url + '/identity',{"username": sessionStorage.getItem("username")}).then(res=>{
             var code = res.body.code;
             if(code === 0){
                 this.$router.push("/mver")
