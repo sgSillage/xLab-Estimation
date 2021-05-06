@@ -28,6 +28,7 @@
   import server from '../../config/index';
   import axios from '../axios/http';
   import swal from 'sweetalert'
+  import Vue from 'vue'
 
   export default {
     name: "Login",
@@ -55,25 +56,36 @@
         }
         else {
           axios.post(this.url, {"username": this.account, "password": this.pwd}).then(response => {
+            if(response.data.status===200){
+                 this.$message.success('登录成功！');
+                 
+
+            //console.log(response.data.result);
+            //console.log(response.data.result.tokenid);
             var realname = this.account;
             var mobile = "";
             var email = "";
 
             this.$store.commit('setToken', response.data.result.tokenid);
             this.$store.commit('setUsername', this.account);
-            this.$store.commit('setRealname', realname);
-            this.$store.commit('setMobile', mobile);
-            this.$store.commit('setEmail', email);
 
-            sessionStorage.setItem('tokenid', response.data.result.tokenid);
+            this.$store.commit('setRealname', response.data.result.realname);
+            this.$store.commit('setMobile', response.data.result.mobile);
+            this.$store.commit('setEmail', response.data.result.email);
+
+            sessionStorage.setItem('tokenid',response.data.result.tokenid);
             sessionStorage.setItem('username', this.account);
-            sessionStorage.setItem('realname', realname);
-            sessionStorage.setItem('mobile', mobile);
-            sessionStorage.setItem('email', email);
+            sessionStorage.setItem('realname', response.data.result.realname);
+            sessionStorage.setItem('mobile', response.data.result.mobile);
+            sessionStorage.setItem('email', response.data.result.email);
 
             this.account = '';
             this.pwd = '';
-            this.$router.push('/center');
+            this.$router.push('/ver');            
+            }
+            else{
+              console.log(response);
+            }
           }).catch(function (error) {
             if (error) {
               if(error.data.result == "unauthorized"){

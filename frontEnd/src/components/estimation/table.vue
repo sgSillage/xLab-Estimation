@@ -65,7 +65,6 @@
 
   import server from '../../../config/index';
   import swal from 'sweetalert';
-  import axios from "axios";
 
   export default {
     name:'ReportTable',
@@ -162,7 +161,7 @@
 //          console.log(global_.ID);
         if (sessionStorage.tokenid) {
 
-          this.$http.get(this.url + '/addRequirement').then(response => {
+          this.$http.get(this.url + '/addRequirement',{"username": sessionStorage.getItem("username")}).then(response => {
             console.log('get success')
             var id = response.body
             this.$router.push({name: 'StepOne', params: {rId: id}})
