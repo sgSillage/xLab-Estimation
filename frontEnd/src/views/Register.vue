@@ -34,7 +34,7 @@ export default {
       email:'',
       error:'',
       checked: false,
-      url: server.estimation + '/account/register',
+      url: server.estimation + '/estimation/register',
     }
   },
   computed:{

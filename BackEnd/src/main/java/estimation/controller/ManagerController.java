@@ -3,6 +3,7 @@ package estimation.controller;
 import estimation.bean.Manager;
 import estimation.service.ManagerService;
 import estimation.service.RequirementService;
+import estimation.service.UserService;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -28,6 +29,9 @@ public class ManagerController {
 
     @Autowired
     ManagerService managerService;
+
+    @Autowired
+    UserService userService;
 
     @Autowired
     RequirementService requirementService;
@@ -126,5 +130,16 @@ public class ManagerController {
         return result;
     }
 
-
+    @PostMapping(value = "/register")
+    public Object register(@RequestBody JSONObject jsonObject){
+        Map<String, Object> result = new HashMap<>();
+        try{
+            userService.add(jsonObject);
+            result.put("status",200);
+        }
+        catch (Exception e){
+            result.put("status",500);
+        }
+        return result;
+    }
 }
