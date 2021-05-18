@@ -39,8 +39,9 @@ public class DescriptionController {
             e.printStackTrace();
             return -1;
         }
-        if(!requirementService.checkIdentity(id, userId))
+        if(!requirementService.checkIdentity(id, userId)){
             return -2;
+        }
 
 
         result.put("code",descriptionService.add(id, jsonObject)? 200:500);

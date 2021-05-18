@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="430cd2db-2810-4d00-ac68-c6195ff72e1e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/estimation/DAO/ManagerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/estimation/DAO/ManagerDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/estimation/DAO/RequirementDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/estimation/DAO/RequirementDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/estimation/DAO/ResultDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/estimation/DAO/ResultDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/estimation/bean/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/estimation/bean/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/estimation/controller/DescriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/estimation/controller/DescriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/estimation/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/estimation/controller/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/estimation/service/ManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/estimation/service/ManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/estimation/service/RequirementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/estimation/service/RequirementService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,23 +21,24 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Users\Sillage\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="C:\Users\Sillage\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3\conf\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1qh3sVV0gwWIvAx7ruD5Rt1S8tG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="2e8bdbbd-365c-48b4-8366-c4faf6f0f572&#10;mongo" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelOrder2" value="2" />
@@ -42,10 +50,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDK" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2051518" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -65,75 +73,47 @@
       <option name="presentableId" value="Default" />
       <updated>1617518207073</updated>
       <workItem from="1617518210879" duration="52000" />
-      <workItem from="1617607373947" duration="1989000" />
-      <workItem from="1617676393247" duration="4677000" />
-      <workItem from="1617753997179" duration="5301000" />
-      <workItem from="1617763688845" duration="2000" />
-      <workItem from="1617879141416" duration="1249000" />
-      <workItem from="1617946012082" duration="1373000" />
-      <workItem from="1618205009029" duration="3838000" />
-      <workItem from="1618279094617" duration="12003000" />
-      <workItem from="1618387012935" duration="1991000" />
-      <workItem from="1618485171098" duration="2138000" />
-      <workItem from="1618711090587" duration="6124000" />
+      <workItem from="1617518310854" duration="663000" />
+      <workItem from="1617519021310" duration="419000" />
+      <workItem from="1617519454644" duration="4363000" />
+      <workItem from="1617607087873" duration="5074000" />
+      <workItem from="1617621900546" duration="3049000" />
+      <workItem from="1617947463963" duration="231000" />
+      <workItem from="1617965641355" duration="22000" />
+      <workItem from="1618193053274" duration="11027000" />
+      <workItem from="1618633767167" duration="410000" />
+      <workItem from="1618730370782" duration="7488000" />
+      <workItem from="1618759064544" duration="2006000" />
+      <workItem from="1618762497758" duration="1726000" />
+      <workItem from="1618826426849" duration="3349000" />
+      <workItem from="1618886858036" duration="4658000" />
+      <workItem from="1619853994285" duration="1375000" />
+      <workItem from="1620044792714" duration="785000" />
+      <workItem from="1620126375977" duration="14000" />
+      <workItem from="1620286758278" duration="13578000" />
+      <workItem from="1620356024415" duration="2282000" />
+      <workItem from="1620371176427" duration="4179000" />
+      <workItem from="1620472765451" duration="4879000" />
+      <workItem from="1620542304725" duration="8000" />
+      <workItem from="1620707418313" duration="1257000" />
+      <workItem from="1621080283706" duration="4859000" />
+      <workItem from="1621171688074" duration="2087000" />
+      <workItem from="1621238924149" duration="6478000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="479" y="242" width="577" height="346" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617676665615">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="479" y="242" width="577" height="346" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1617676665615" />
-    <state x="530" y="120" key="FileChooserDialogImpl" timestamp="1617678295658">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="530" y="120" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1617678295658" />
-    <state width="1483" height="223" key="GridCell.Tab.0.bottom" timestamp="1618729928576">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1483" height="189" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617682558457" />
-    <state width="1483" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1618729928576" />
-    <state width="1483" height="223" key="GridCell.Tab.0.center" timestamp="1618729928576">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1483" height="189" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617682558456" />
-    <state width="1483" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1618729928576" />
-    <state width="1483" height="223" key="GridCell.Tab.0.left" timestamp="1618729928576">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1483" height="189" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617682558456" />
-    <state width="1483" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1618729928576" />
-    <state width="1483" height="223" key="GridCell.Tab.0.right" timestamp="1618729928576">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1483" height="189" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617682558457" />
-    <state width="1483" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1618729928576" />
-    <state width="1483" height="223" key="GridCell.Tab.1.bottom" timestamp="1618729928576">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1483" height="189" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617682558458" />
-    <state width="1483" height="223" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1618729928576" />
-    <state width="1483" height="223" key="GridCell.Tab.1.center" timestamp="1618729928576">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1483" height="189" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1617682558457" />
-    <state width="1483" height="223" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1618729928576" />
-    <state width="1483" height="223" key="GridCell.Tab.1.left" timestamp="1618729928576">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1483" height="189" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1617682558457" />
-    <state width="1483" height="223" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1618729928576" />
-    <state width="1483" height="223" key="GridCell.Tab.1.right" timestamp="1618729928576">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1483" height="189" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1617682558457" />
-    <state width="1483" height="223" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1618729928576" />
-    <state x="110" y="0" width="1384" height="824" key="SettingsEditor" timestamp="1617761184113">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="110" y="0" width="1384" height="824" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1617761184113" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -120,7 +120,7 @@
     components: {ElButton},
     name:'Body_IFPUGReport',
     mounted:function () {
-      this.$http.post(this.url + '/getReport/' + this.$route.params.rId, {"username": sessionStorage.getItem("username")}).then(response=>{
+      this.$http.get(this.url + '/getReport/' + this.$route.params.rId, {"username": sessionStorage.getItem("username")}).then(response=>{
         console.log(response.body)
         trans=response.body.newVAF;
         projectName=response.body.description.projectName;

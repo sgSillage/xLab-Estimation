@@ -296,8 +296,9 @@
         }
       },
         mounted() {
-            this.$http.post(this.url + '/identity', {"username": sessionStorage.getItem("username")}).then(res=>{
-                var code = res.body.code;
+            this.$http.get(this.url + '/identity', {"username": sessionStorage.getItem("username")}).then(res=>{
+                var code = res.data.code;
+                console.log(code);
                 if(code === 1){
                     this.$router.push("/ver")
                 }
@@ -311,7 +312,7 @@
             },res=>{
 
             });
-            this.$http.post(this.url + '/getAllRequirements', {"username": sessionStorage.getItem("username")}).then(res=>{
+            this.$http.get(this.url + '/getAllRequirements', {"username": sessionStorage.getItem("username")}).then(res=>{
                     for(var i = 0; i < res.body.length; i++){
                         var temp = {
                             "userId" : '',

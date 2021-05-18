@@ -24,13 +24,50 @@
 </template>
 
 <script>
+import server from '../../../config/index';
+import axios from '../../axios/http';
+
 export default {
   name: "Header2",
+  data() {
+      return {
+          url: server.estimation + '/estimation/logout'
+      }
+  },
   methods:{
     logout:function(){
-      this.$store.commit("reset");
-      sessionStorage.removeItem("tokenid");
-      this.$router.push( '/' );
+      axios(
+          {
+            url: this.url,
+            method: "POST",
+            /*transformRequest: [function (data) {
+              // Do whatever you want to transform the data
+              let ret = ''
+              for (let it in data) {
+                ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
+              }
+              return ret
+            }],*/
+            //headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+          }
+        ).then(function (response) {
+          if (response.data.status == "200") {
+            this.$message({
+              message: '成功退出登录',
+              type: 'success'
+            });
+             this.$store.commit("reset");
+             sessionStorage.removeItem("tokenid");
+             this.$router.push( '/login' );
+          }
+        }.bind(this))
+          .catch(function (error) {
+            if (error.status == 500) {
+              alert('服务器错误');
+            }
+          });
+     
+
     }
   }
 };

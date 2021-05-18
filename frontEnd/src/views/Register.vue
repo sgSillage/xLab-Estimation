@@ -34,7 +34,7 @@ export default {
       email:'',
       error:'',
       checked: false,
-      url: server.estimation + '/account/register',
+      url: server.estimation + '/estimation/account/register',
     }
   },
   computed:{
@@ -81,6 +81,7 @@ export default {
       }
       else{
         axios.post(this.url, {"username": this.account, "email": this.email, "password": this.pwd}).then(function (response){
+          console.log(response)
           if(response.status == 200) {
             this.$message({
               message: '注册成功',
@@ -89,7 +90,15 @@ export default {
             this.account='';
             this.pwd= '';
             this.pwd_rep= '';
-            this.$router.push('/center');
+            this.$router.push('/login');
+          }
+          else{
+              if(response.status == 0){
+                  this.$message({
+                       message: '用户名已被占用',
+                       type: 'error'
+                   });
+              }
           }
         }.bind(this)).catch(function(error){
           if(error.response){

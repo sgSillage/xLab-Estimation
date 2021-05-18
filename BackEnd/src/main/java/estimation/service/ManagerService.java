@@ -28,11 +28,20 @@ public class ManagerService {
         return false;
     }
 
-    public Boolean add(String username){
+    public Manager findManager(String username){
+        List<Manager> managers = managerDAO.getAll();
+        for(Manager manager : managers){
+            if(manager.getUsername().equals(username)){
+                return manager;
+            }
+        }
+
+        return null;
+    }
+
+    public Boolean add(Manager manager){
         String id = String.valueOf(System.currentTimeMillis());
-        Manager manager = new Manager();
         manager.setId(id);
-        manager.setUsername(username);
         try {
             managerDAO.add(manager);
             return true;
@@ -58,6 +67,18 @@ public class ManagerService {
         }
         catch (Exception e){
             return null;
+        }
+    }
+
+    public Boolean update(Manager manager, String phone, String email){
+        try{
+            manager.setPhone(phone);
+            manager.setEmail(email);
+            managerDAO.save(manager);
+            return true;
+        }
+        catch (Exception e){
+            return false;
         }
     }
 }

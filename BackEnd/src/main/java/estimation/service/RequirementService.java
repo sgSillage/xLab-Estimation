@@ -120,6 +120,19 @@ public class RequirementService {
         }
     }
 
+    public Boolean removeAccount(HttpServletRequest request)
+    {
+        java.lang.String token = request.getHeader("Authorization");
+        Boolean tokenExist = stringRedisTemplate.hasKey(token);
+        if (tokenExist) {
+            stringRedisTemplate.delete(token);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     public void changeStatus(String id, String status){
         requirementDAO.changeStatus(id,status);
     }

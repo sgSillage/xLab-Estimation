@@ -8,7 +8,7 @@
             <div class="page-header1">
                 <div class="header1-container">
                     <div class="avatar">
-                        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509041832135&di=abc5c99b8048b0c600049e68cdb64602&imgtype=0&src=http%3A%2F%2Fimglf1.ph.126.net%2FnMbQAfw2LAJG4ahCYE_XJA%3D%3D%2F3886606478520925399.jpg">
+                        <img src="https://ss1.baidu.com/6ON1bjeh1BF3odCf/it/u=1101091621,3908603394&fm=15&gp=0.jpg">
                     </div>
                     <div class="person-info">
                         <div class="name">用户创建估算--项目说明</div>
@@ -37,7 +37,7 @@
                 <el-form-item label="估算方式" prop="estimationMethod">
                     <el-select style="padding-right:70%;min-width: 100px" v-model="form.estimationMethod" placeholder="请选择估算方式">
                         <el-option disabled value="">请选择</el-option>
-                        <el-option label="IFPUG" value="IFPUG"></el-option>
+                        <el-option label="功能点法" value="功能点法"></el-option>
                         <!-- <el-option label="COSMIC" value="COSMIC"></el-option> -->
                     </el-select>
                 </el-form-item>
@@ -70,7 +70,7 @@
             HeadBarLight2
         },
         mounted: function () {
-            this.$http.post(this.url + '/getRequirement/' + this.$route.params.rId,{"username": sessionStorage.getItem("username")}).then(response => {
+            this.$http.get(this.url + '/getRequirement/' + this.$route.params.rId,{"username": sessionStorage.getItem("username")}).then(response => {
                     console.log('save success');
                     console.log(response.body);
                     this.form.projectName = response.body.description.projectName;

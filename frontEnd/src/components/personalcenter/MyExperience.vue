@@ -103,7 +103,7 @@
           ],
         },
         dialogFormVisible: false,
-        url: server.url + '/api/user/projectExperience'
+        url: server.estimation+ '/estimation/user/projectexperience'
       }
     },
     methods: {
@@ -114,8 +114,8 @@
           else
             throw response;
           if (response.data.status == 200) {
-            this.items = response.data.result;
-            this.totolCount = response.data.result.length;
+            this.items = response.data.data;
+            this.totolCount = response.data.data.length;
             this.loadData(this.currentPage, this.pageSize, this.totolCount);
           }
         }).catch(function (error) {
@@ -138,24 +138,15 @@
         this.$refs[formName].validate((valid) => {
           if (valid) {
             axios({
-              url: this.url,
+              url: this.url+"/add",
               method: 'POST',
-              data: this.ruleForm,
-              transformRequest: [function (data) {
-                // Do whatever you want to transform the data
-                let ret = ''
-                for (let it in data) {
-                  ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
-                }
-                return ret
-              }],
-              headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+              data: this.ruleForm
             }).then(function (response) {
-              if (response.data.status == 201) {
+              if (response.data.status == 200) {
               }
               else
                 throw response;
-              if (response.data.status == 201) {
+              if (response.data.status == 200) {
                 this.$message({
                   message: '添加经历成功',
                   type: 'success'
@@ -228,26 +219,17 @@
           if (valid) {
             axios(
               {
-                url: this.url,
-                method: "PUT",
+                url: this.url+"/change",
+                method: "POST",
                 data: {
                   project_id: this.updateId,
                   project_name: this.ruleForm.project_name,
                   project_region: this.ruleForm.project_region,
-                  project_address: this.ruleForm.project_region,
+                  project_address: this.ruleForm.project_address,
                   project_text: this.ruleForm.project_text
-                },
-                transformRequest: [function (data) {
-                  // Do whatever you want to transform the data
-                  let ret = ''
-                  for (let it in data) {
-                    ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
-                  }
-                  return ret
-                }],
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+                }
               }).then(function (response) {
-              if (response.data.status == "201") {
+              if (response.data.status == "200") {
                 this.getExperience();
                 this.$message({
                   message: '修改需求成功',
@@ -272,7 +254,7 @@
         });
       },
       remove(row) {
-        axios.delete(server.url + '/api/projectExperience/' + row.id).then(function (response) {
+        axios.get(this.url + "/delete?id=" + row.id).then(function (response) {
           if (response.data.status == "200") {
             this.$message({
               message: '删除需求成功',

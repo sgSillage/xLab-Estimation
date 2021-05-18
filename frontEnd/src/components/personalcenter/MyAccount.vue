@@ -66,7 +66,7 @@
         phone: '',
         newPhone: '',
         name: '',
-        url: server.url + '/api/account'
+        url: server.estimation + '/estimation/account/update'
       }
     },
     methods: {
@@ -104,15 +104,15 @@
               mobile: this.newPhone,
               name: this.name
             },
-            transformRequest: [function (data) {
+            /*transformRequest: [function (data) {
               // Do whatever you want to transform the data
               let ret = ''
               for (let it in data) {
                 ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
               }
               return ret
-            }],
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }],*/
+            //headers: {'Content-Type': 'application/x-www-form-urlencoded'}
           }
         ).then(function (response) {
           if (response.data.status == "200") {
